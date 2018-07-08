@@ -1,0 +1,37 @@
+{
+  "namespace": "App",
+  "fsNamespace": "app",
+  "loader": "../app.js",
+  "global": "app.global.js",
+  "core": "app.onlaozns.js",
+  "corePolyfilled": "app.sidvzhvv.js",
+  "components": {
+    "app-home": {
+      "$": "y1q9lu6x"
+    },
+    "app-root": {
+      "$": "hrh4coau"
+    },
+    "books-list": {
+      "$": "iejrieup"
+    },
+    "saved-books": {
+      "$": "8vpgzdsn"
+    },
+    "search-box": {
+      "$": "y1q9lu6x"
+    },
+    "stencil-route": {
+      "$": "hrh4coau"
+    },
+    "stencil-route-link": {
+      "$": "hrh4coau"
+    },
+    "stencil-route-switch": {
+      "$": "hrh4coau"
+    },
+    "stencil-router": {
+      "$": "hrh4coau"
+    }
+  }
+}

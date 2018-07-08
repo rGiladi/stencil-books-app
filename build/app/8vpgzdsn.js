@@ -1,0 +1,2 @@
+/*! Built with http://stenciljs.com */
+const{h:t}=window.App;class e{updateList(){this.el.querySelector("books-list").items=this.items}componentDidLoad(){const{mapStateToProps:t}=this.store;t(this,t=>({items:t.books.savedItems}))}render(){const{items:e}=this,s=!e||!e.length;return t("div",{class:s?"empty":""},s?t("div",null,"You didn't save any book yet..."):null,t("books-list",null))}static get is(){return"saved-books"}static get properties(){return{el:{elementRef:!0},items:{state:!0,watchCallbacks:["updateList"]},store:{context:"store"}}}}export{e as SavedBooks};
