@@ -5,16 +5,14 @@ import { Store } from '@stencil/redux'
   tag: 'app-home'
 })
 export class AppHome {
-
   @Element() el: HTMLElement
 
   @Prop({ context: 'store' }) store: Store
-  @State() items: Array<any>
+  @State() books: Array<any>
 
-  @Watch('items')
+  @Watch('books')
   updateList() {
-    const booksList = this.el.querySelector('books-list')
-    booksList.items = this.items
+    this.el.querySelector('books-list').books = this.books
   }
 
   componentDidLoad() {
@@ -22,7 +20,7 @@ export class AppHome {
 
     mapStateToProps(this, state => {
       return {
-        items: state.books.items
+        books: state.books.items
       }
     })
   }

@@ -9,12 +9,11 @@ export class SavedBooks {
   @Element() el: HTMLElement
 
   @Prop({ context: 'store' }) store: Store
-  @State() items: Array<any>
+  @State() books: Array<any>
 
-  @Watch('items')
+  @Watch('books')
   updateList() {
-    const booksList = this.el.querySelector('books-list')
-    booksList.items = this.items
+    this.el.querySelector('books-list').books = this.books
   }
 
   componentDidLoad() {
@@ -22,14 +21,14 @@ export class SavedBooks {
 
     mapStateToProps(this, state => {
       return {
-        items: state.books.savedItems
+        books: state.books.savedItems
       }
     })
   }
 
   render() {
-    const { items } = this
-    const empty = !items || !items.length
+    const { books } = this
+    const empty = !books || !books.length
 
     return (
       <div class={empty ? 'empty' : ''}>

@@ -4,10 +4,10 @@ import { Store } from '@stencil/redux'
 import { configureStore } from '../../store/index'
 
 @Component({
-  tag: 'app-root'
+  tag: 'app-root',
+  styleUrl: 'app-root.css'
 })
 export class AppRoot {
-
   @Prop({ context: 'store' }) store: Store
   @Prop({ context: 'isServer' }) private isServer: boolean;
 
@@ -30,13 +30,13 @@ export class AppRoot {
     return (
       <stencil-router>
         <stencil-route-link url='/' exact>Home</stencil-route-link>
-        <stencil-route-link url='/saved-books'>My Books</stencil-route-link>
+        <stencil-route-link url='/saved'>My Books</stencil-route-link>
 
         <stencil-route-switch scrollTopOffset={0}>
           <stencil-route url='/' component='app-home' exact />
-          <stencil-route url='/saved-books' component='saved-books' />
+          <stencil-route url='/saved' component='saved-books' />
         </stencil-route-switch>
       </stencil-router>
-    );
+    )
   }
 }

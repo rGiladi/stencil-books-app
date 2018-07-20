@@ -25,9 +25,9 @@ declare global {
   interface HTMLAttributes {}
 }
 
+import '@stencil/redux';
 import '@stencil/router';
 import '@stencil/state-tunnel';
-import '@stencil/redux';
 
 
 declare global {
@@ -100,7 +100,7 @@ declare global {
 
   namespace StencilComponents {
     interface BooksList {
-      'items': Array<any>;
+      'books': Array<any>;
     }
   }
 
@@ -123,7 +123,7 @@ declare global {
   }
   namespace JSXElements {
     export interface BooksListAttributes extends HTMLAttributes {
-      'items'?: Array<any>;
+      'books'?: Array<any>;
     }
   }
 }

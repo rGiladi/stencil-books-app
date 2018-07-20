@@ -1,12 +1,12 @@
 import { Component, Prop, State } from '@stencil/core'
 import { Store, Action } from '@stencil/redux'
-import { searchBooks } from '../../store/actions/index'
+import { searchBooks } from '../../store/actions'
 
 @Component({
-  tag: 'search-box'
+  tag: 'search-box',
+  styleUrl: 'search-box.css'
 })
 export class SearchBox {
-
   @Prop({ context: 'store' }) store: Store
   @State() value: string = ''
 
@@ -21,15 +21,9 @@ export class SearchBox {
   }
 
   render() {
-    const { value} = this
-
     return (
       <div>
-        <input
-          placeholder='Search Books...'
-          value={value}
-          onInput={this.handleChange}
-        />
+        <input value={this.value} onInput={this.handleChange} />
         <button onClick={this.search}>Search</button>
       </div>
     )
@@ -41,7 +35,6 @@ export class SearchBox {
 
   search = () => {
     const value = this.value.trim()
-
     if (value) {
       this.searchBooks(value)
     } else {

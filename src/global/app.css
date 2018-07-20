@@ -1,3 +1,13 @@
+/*
+  Global App CSS
+  ----------------------
+  Use this file for styles that should be applied to all components.
+  For example, "font-family" within the "body" selector is a CSS property
+  most apps will want applied to all components.
+
+  Any global CSS variables should also be applied here.
+*/
+
 
 body {
   margin: 16px;
@@ -6,26 +16,18 @@ body {
   background: #f9f9f9;
 }
 
-/* Search Box */
-
-search-box {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  margin: 16px 0;
+stencil-route-link a {
+  margin: 0 8px;
 }
 
-search-box > div {
-  display: flex;
-  width: 50%;
-  min-width: 310px;
+stencil-route-link a.link-active {
+  font-weight: bold;
 }
 
-search-box input {
-  width: 100%;
+stencil-route-link a {
+  color: rgba(0, 0, 0, .75);
+  text-decoration: none;
 }
-
-/* Books List  */
 
 .loader, .empty, .error {
   height: calc(100vh - 200px);
@@ -38,7 +40,7 @@ search-box input {
   display: none;
 }
 
-books-list > div > ul {
+books-list > ul {
   display: grid;
   grid-gap: 25px;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -93,24 +95,21 @@ saved-books .empty {
   height: calc(100vh - 100px);
 }
 
-/* Links  */
-
-stencil-route-link a {
-  margin: 0 8px;
+search-box {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 16px 0;
 }
 
-stencil-route-link a.link-active {
-  font-weight: bold;
+search-box > div {
+  display: flex;
+  width: 50%;
+  min-width: 310px;
 }
 
-a {
-  color: rgba(0, 0, 0, .75);
-  text-decoration: none;
-}
-
-/* Input  */
-
-input {
+search-box input {
+  width: 100%;
   padding: 10px;
   background: #E8E9EA;
   color: #313A3D;
@@ -120,8 +119,6 @@ input {
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
 }
-
-/* Button */
 
 button {
   background: #685369;

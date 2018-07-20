@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
-import * as actions from '../actions/index'
+import * as actions from './actions'
 
 const booksState = {
   items: [],
   savedItems: [],
-  fetchError: '',
-  isFetching: false
+  isFetching: false,
+  fetchError: ''
 }
 
 function books(state = booksState, action) {
